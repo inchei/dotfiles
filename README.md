@@ -1,7 +1,7 @@
 # CSS-archives
 Selfish designs.
 ## Anti Moe Wiki
-![Preview](https://raw.githubusercontent.com/inchei/CSS-archives/master/preview02.png)
+![Preview](https://raw.githubusercontent.com/inchei/CSS-archives/master/preview/preview02.png)
 ### Environment
 * [Moegirl Wiki](https://zh.moegirl.org).
 
@@ -10,7 +10,7 @@ Selfish designs.
 * Edit your vector.css or vector.js pages to extend it.
 
 ## Fake Material Design Bangumi
-![Preview](https://raw.githubusercontent.com/inchei/CSS-archives/master/preview01.png)
+![Preview](https://raw.githubusercontent.com/inchei/CSS-archives/master/preview/preview01.png)
 ### Environment
 * [Bangumi](http://bangumi.tv).
 
