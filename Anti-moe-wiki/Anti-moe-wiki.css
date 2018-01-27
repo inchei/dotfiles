@@ -119,7 +119,8 @@ kbd,
 samp,
 .mw-code,
 textarea,
-input {
+input,
+.mw-editfont-monospace {
     font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", "Noto Serif CJK SC", "HanaMinA Regular", "HanaMinB Regular", "TH-Khaai-TP0", "TH-Khaai-TP1", "TH-Khaai-TP2", monospace;
 }
 
@@ -191,8 +192,8 @@ input {
     margin-top: -5em;
     margin-left: 0 !important;
     height: 5em;
-    box-shadow: 0 140px 0 200px #4879BD;
-    background: #4879BD;
+    box-shadow: 0 140px 0 300px #5D828A;
+    background: #5D828A;
     width: 100%;
 }
 
@@ -202,7 +203,7 @@ div#p-personal {
     top: 0;
     right: 0;
     padding: 12px !important;
-    background: #4879BD;
+    background: #5D828A;
     box-shadow: 0 1px 3px 0 rgba(0, 34, 77, .05);
     border-bottom: 1px solid rgba(30, 35, 42, .06);
     justify-content: space-between;
@@ -463,7 +464,8 @@ table.navbox {
 
 pre,
 .mw-code,
-code {
+code,
+.mw-editform #wpTextbox1 {
     background: #2D2D2D;
     color: rgba(255, 255, 255, 0.8);
     border-radius: 3px;
@@ -472,7 +474,8 @@ code {
 pre::selection,
 pre a::selection,
 .mw-code::selection,
-code::selection {
+code::selection,
+.mw-editform #wpTextbox1::selection {
     color: #669900;
     background: none;
 }
