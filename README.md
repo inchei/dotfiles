@@ -2,7 +2,6 @@
 Selfish designs by [Inchei](https://inchei.github.io).
 ## Anti Moe Wiki
 ### Feature
-<img src="https://raw.githubusercontent.com/inchei/CSS-archives/master/preview/preview02.png" width="500px"/>
 
 ### Environment
 * [Moegirl Wiki](https://zh.moegirl.org).

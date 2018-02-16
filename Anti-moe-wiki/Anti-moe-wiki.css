@@ -93,16 +93,13 @@ span[lang=ja],
 
 /*搜索框，请在参数设置中打开整合至个人工具*/
 
-#p-search {
-    position: fixed;
-    bottom: 60px;
-    left: 40px;
-}
-
 div#simpleSearch {
-    background: #fff;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, .2);
     transition: all 0.3s ease-out;
+    width: 8%;
+    position: fixed;
+    left: 20px;
+    top: 14px;
     opacity: 0;
 }
 
@@ -136,7 +133,7 @@ input,
 }
 
 .heimu a {
-    color: #1976D2 !important;
+    color: #5DAC81 !important;
 }
 
 .heimu:hover {
@@ -152,7 +149,7 @@ input,
     -webkit-filter: blur(0.2px);
     -moz-filter: blur(0.2px);
     -o-filter: blur(0.2px);
-    color: #1976D2 !important;
+    color: #5DAC81 !important;
 }
 
 
@@ -190,8 +187,8 @@ input,
     margin-top: -5em;
     margin-left: 0 !important;
     height: 5em;
-    box-shadow: 0 140px 0 300px #5D828A;
-    background: #5D828A;
+    box-shadow: 0 140px 0 300px #F19797;
+    background: #F19797;
     width: 100%;
 }
 
@@ -201,7 +198,7 @@ div#p-personal {
     top: 0;
     right: 0;
     padding: 12px !important;
-    background: #5D828A;
+    background: #F19797;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
     justify-content: space-between;
     z-index: 1 !important;
@@ -312,6 +309,11 @@ h6 {
     color: rgba(0, 0, 0, 0.9);
 }
 
+::-webkit-input-placeholder,
+::input-placeholder {
+    color: rgba(0, 0, 0, 0.9);
+}
+
 #firstHeading {
     position: absolute;
     top: 80px;
@@ -345,7 +347,7 @@ a,
 .mw-body-content a.extiw,
 .mw-body-content a.extiw:active,
 .mw-body-content a.external {
-    color: #1976D2;
+    color: #5DAC81;
     text-decoration: none !important;
     transition: color 0.3s ease;
 }
@@ -353,7 +355,7 @@ a,
 a:visited,
 .mw-body-content a.external:visited,
 .mw-body-content a.extiw:visited {
-    color: #5E35B1;
+    color: #228b22;
 }
 
 a:active,
@@ -362,7 +364,7 @@ a:active,
 a:hover,
 .mw-body-content a.external:hover,
 .mw-body-content a.extiw:hover {
-    color: #FFC107;
+    color: #0089A7;
 }
 
 h1,
@@ -423,7 +425,7 @@ hr {
     height: 100vh;
     padding: 80px 20px 20px 20px;
     width: 15%;
-    background: #fff;
+    background: rgba(8, 8, 8, .8) !important;
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
     z-index: 2;
     opacity: 0;
@@ -448,8 +450,9 @@ hr {
 }
 
 .toctext,
-#toccontent li a span {
-    color: rgba(0, 0, 0, 0.8);
+#toccontent li a span,
+.tocnumber {
+    color: rgba(225, 225, 225, 0.8);
 }
 
 
@@ -555,6 +558,7 @@ code::selection,
 .mw-body .mw-editsection-like,
 .mw-editsection-bracket,
 #footer-icons,
-.toctitle {
+.toctitle,
+div#simpleSearch #searchButton {
     display: none;
 }

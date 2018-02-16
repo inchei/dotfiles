@@ -34,7 +34,7 @@
 
     //仅在有背景图时使主体背景半透明
     if ($('.sidebar-character').length > 0) {
-        $('.ns-0 div#content, .ns-0 div#p-cactions li a:hover, .ns-0 div#p-cactions li.selected a, .ns-0 div#content div.thumb, div#content, div#p-cactions li a:hover, div#p-cactions li.selected a, div#content div.thumb').css('background', 'rgba(255, 255, 255, .9)');
+        $('.ns-0 div#content, .ns-0 div#p-cactions li a:hover, .ns-0 div#p-cactions li.selected a, .ns-0 div#content div.thumb, div#content, div#p-cactions li a:hover, div#p-cactions li.selected a, div#content div.thumb').css('background', 'rgba(255, 255, 255, .8)');
         $('#mw-head-base').css('box-shadow', '0 140px 0 300px rgba(93, 130, 138, .5)');
         $('#mw-head-base').css('background', 'rgba(93, 130, 138, .5)');
     }
