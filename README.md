@@ -1,4 +1,4 @@
-# CSS-archives
+# StyleArchives
 Selfish designs by [Inchei](https://inchei.github.io).
 ## Anti Moe Wiki
 ### Feature
