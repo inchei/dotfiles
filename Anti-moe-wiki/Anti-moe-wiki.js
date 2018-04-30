@@ -9,8 +9,8 @@
         str = str.substring(str.indexOf("?title=") + 7);
     else
         str = str.substring(str.indexOf(".org/") + 5);
-    $("#footer-info-lastmod").wrap('<a href="/index.php?title=' + str + '&action=history"></a>');
-    $("#firstHeading").append('<span class="mw-editsection" style="display: none;">[<a href="/index.php?title=' + str + '&action=edit">编辑</a>]</span>');
+    $("#footer-info-lastmod").wrap('<a href="/index.php?title='+str+'&action=history"></a>');
+    $("#firstHeading").append('<span class="mw-editsection" style="display: none;">[<a href="/index.php?title='+str+'&action=edit">编辑</a>]</span>');
 
     var topTitle = document.getElementById("firstHeading");
     topTitle = topTitle.innerText;
@@ -20,11 +20,11 @@
     if (document.body.scrollHeight >= $(window).height() + 300) {
         $("#p-personal").hide();
         window.onscroll = function() {
-            var len = window.scrollY;
-            if (len < 300)
-                $("#p-personal").slideUp(300);
-            else
-                $("#p-personal").slideDown(300);
+        var len = window.scrollY;
+        if (len < 300)
+            $("#p-personal").slideUp(300);
+        else
+            $("#p-personal").slideDown(300);
         };
     } else {
         $("#p-personal").show();
@@ -48,10 +48,10 @@
     });
 
     //暴力解决无法显示图片的问题（已修复）
-    /*$(function (){
+    $(function (){
     $("img").each(function() {
             this.src = this.src.replace('static', 'img');
             this.srcset = this.srcset.replace('static', 'img');
         });
-    });*/
+    });
 })(jQuery, mediaWiki);

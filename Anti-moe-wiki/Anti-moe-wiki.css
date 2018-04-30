@@ -1,3 +1,39 @@
+/**
+ *    _____          __  .__     _____                   __      __.__ __   .__ 
+ *   /  _  \   _____/  |_|__|   /     \   ____   ____   /  \    /  \__|  | _|__|
+ *  /  /_\  \ /    \   __\  |  /  \ /  \ /  _ \_/ __ \  \   \/\/   /  |  |/ /  |
+ * /    |    \   |  \  | |  | /    Y    (  <_> )  ___/   \        /|  |    <|  |
+ * \____|__  /___|  /__| |__| \____|__  /\____/ \___  >   \__/\  / |__|__|_ \__|
+ *         \/     \/                  \/            \/         \/          \/   
+ *
+ * Designed, built, and released under MIT license by @inchei. Learn more at
+ * https://github.com/inchei/StyleArchives.
+ */
+
+/**
+ * 目錄
+ *
+ * 統一設置
+ * 搜索框
+ * 黑幕模糊化
+ * 頂端
+ * 主體
+ * 目錄樣式
+ * 側邊欄
+ * 縮略圖
+ * 畫廊
+ * 表格相關
+ * Navbox
+ * 隱藏内容
+ */
+
+
+
+
+
+/*------------------------------------*\
+    #統一設置
+\*------------------------------------*/
 #content,
 .infoBoxContent,
 table.wikitable,
@@ -91,8 +127,13 @@ span[lang=ja],
 }
 
 
-/*搜索框，请在参数设置中打开整合至个人工具*/
 
+
+
+/*------------------------------------*\
+    #搜索框
+    （请在参数设置中打开整合至个人工具）
+\*------------------------------------*/
 div#simpleSearch {
     background: rgba(255, 255, 255, .2);
     transition: all 0.3s ease-out;
@@ -116,12 +157,17 @@ samp,
 textarea,
 input,
 .mw-editfont-monospace {
-    font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console", "Courier New", "Noto Serif CJK SC", "HanaMinA Regular", "HanaMinB Regular", "TH-Khaai-TP0", "TH-Khaai-TP1", "TH-Khaai-TP2", monospace;
+    font-family: monospace;
 }
 
 
-/*黑幕模糊化，改自https://userstyles.org/styles/118277/bangumi-mask*/
 
+
+
+/*------------------------------------*\
+    #黑幕模糊化
+    改自https://userstyles.org/styles/118277/bangumi-mask
+\*------------------------------------*/
 .heimu,
 .heimu a {
     background-color: transparent !important;
@@ -153,15 +199,12 @@ input,
 }
 
 
-/*选中背景色*/
-
-::selection {
-    background: #DAEAFF;
-}
 
 
-/*顶端*/
 
+/*------------------------------------*\
+    #頂端
+\*------------------------------------*/
 .topButton1,
 .topButton2 {
     position: absolute;
@@ -199,7 +242,7 @@ div#p-personal {
     right: 0;
     padding: 12px !important;
     background: #F19797;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0,  .2);
     justify-content: space-between;
     z-index: 1 !important;
 }
@@ -225,6 +268,11 @@ div#p-personal {
     color: transparent !important;
 }
 
+.mw-echo-ui-notificationBadgeButtonPopupWidget > .oo-ui-popupWidget,
+#p-personal a.oo-ui-buttonElement-button {
+    color: rgba(0, 0, 0, 0.9);
+}
+
 .topTitle {
     color: rgba(255, 255, 255, 0.95);
     float: left;
@@ -239,7 +287,15 @@ div#p-personal {
 }
 
 
-/*主体*/
+
+
+
+/*------------------------------------*\
+    #主體
+\*------------------------------------*/
+::selection {
+    background: #DAEAFF;
+}
 
 html {
     font-size: 18px;
@@ -305,12 +361,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6{
     color: rgba(0, 0, 0, 0.9);
 }
-
 ::-webkit-input-placeholder,
-::input-placeholder {
+::input-placeholder{
     color: rgba(0, 0, 0, 0.9);
 }
 
@@ -412,33 +467,103 @@ hr {
     border-bottom-right-radius: 3px;
 }
 
-.mw-body .mw-editsection {}
 
 
-/*目录*/
 
+
+/*------------------------------------*\
+    #目錄樣式
+\*------------------------------------*/
 #toc,
-.toc {
+.toc{
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
-    height: 100vh;
+    height: 100vh !important;
     padding: 80px 20px 20px 20px;
-    width: 15%;
+    width: 15% !important;
     background: rgba(8, 8, 8, .8) !important;
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
     z-index: 2;
     opacity: 0;
     font-size: 1em;
+    overflow-y: auto;
+}
+
+.mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.toctext,
+#toccontent li a span,
+.tocnumber {
+    color: rgba(225, 225, 225, 0.8);   
 }
 
 #toc:hover,
-.toc:hover {
+.toc:hover{
     animation: toc 300ms;
     opacity: 1;
 }
 
 @-webkit-keyframes toc {
+    from {
+        margin-right: -15%;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #側邊欄
+\*------------------------------------*/
+div#mw-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh !important;
+    padding: 80px 20px 20px 20px;
+    width: 15% !important;
+    background: rgba(8, 8, 8, .8) !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    opacity: 0;
+    font-size: 0.9rem;
+    overflow-y: auto;
+}
+
+div#mw-panel div.portal div.body ul li a ,
+div#mw-panel div.portal div.body ul li a:visited,
+div#mw-panel div.portal h3{
+    color: rgba(225, 225, 225, 0.8);
+    text-shadow: none;
+}
+
+div#mw-panel div.portal div.body {
+    background: none;
+}
+
+div#mw-panel div.portal div.body ul li,
+div#mw-panel div.portal h3{
+    font-size: inherit;
+    line-height: 1rem;
+}
+
+div#mw-panel:hover {
+    animation: pan 300ms;
+    opacity: 1;
+}
+
+@-webkit-keyframes pan {
     from {
         margin-left: -15%;
         opacity: 0;
@@ -449,15 +574,13 @@ hr {
     }
 }
 
-.toctext,
-#toccontent li a span,
-.tocnumber {
-    color: rgba(225, 225, 225, 0.8);
-}
 
 
-/*缩略图*/
 
+
+/*------------------------------------*\
+    #縮略圖
+\*------------------------------------*/
 div.thumbinner {
     padding: 8px;
     overflow: visible;
@@ -470,16 +593,24 @@ div.thumbinner {
 }
 
 
-/*画廊*/
 
+
+
+/*------------------------------------*\
+    #畫廊
+\*------------------------------------*/
 li.gallerybox div.thumb {
     padding: 1px;
     background: #F9F9F9 !important;
 }
 
 
-/*表格相关*/
 
+
+
+/*------------------------------------*\
+    #表格相關
+\*------------------------------------*/
 table.wikitable>tr>th,
 table.wikitable>tr>td,
 table.wikitable>*>tr>th,
@@ -497,8 +628,12 @@ table.wikitable>*>tr>th {
 }
 
 
-/*navbox*/
 
+
+
+/*------------------------------------*\
+    #Navbox
+\*------------------------------------*/
 table.navbox {
     font-size: smaller;
 }
@@ -506,9 +641,9 @@ table.navbox {
 pre,
 .mw-code,
 code,
-.mw-editform #wpTextbox1 {
-    background: #2D2D2D;
-    color: rgba(255, 255, 255, 0.8);
+.mw-editform #wpTextbox1{
+    background: #F0F0F0;
+    color: #444;
     border-radius: 3px;
 }
 
@@ -516,14 +651,14 @@ pre::selection,
 pre a::selection,
 .mw-code::selection,
 code::selection,
-.mw-editform #wpTextbox1::selection {
+.mw-editform #wpTextbox1::selection{
     color: #669900;
     background: none;
 }
 
 
 /*滚动条*/
-
+/*
 ::-webkit-scrollbar {
     width: 6px;
     height: 10px;
@@ -544,15 +679,19 @@ code::selection,
 
 ::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.1);
-}
+}*/
 
 
-/*隐藏内容*/
 
+
+
+/*------------------------------------*\
+    #隱藏内容
+\*------------------------------------*/
 #localNotice,
 #footer-info-copyright,
 .mw-editTools,
-#mw-panel,
+#p-logo,
 #left-navigation,
 #right-navigation,
 .mw-body .mw-editsection-like,

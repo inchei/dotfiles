@@ -1,0 +1,26 @@
+= StyleArchives =
+Selfish designs just for myself. If you use them, the words may be changed.
+
+= Contents =
+* Anti Moe Wiki
+* Fake Material Design Bangumi
+
+
+
+== Anti Moe Wiki ==
+    _____          __  .__     _____                   __      __.__ __   .__ 
+   /  _  \   _____/  |_|__|   /     \   ____   ____   /  \    /  \__|  | _|__|
+  /  /_\  \ /    \   __\  |  /  \ /  \ /  _ \_/ __ \  \   \/\/   /  |  |/ /  |
+ /    |    \   |  \  | |  | /    Y    (  <_> )  ___/   \        /|  |    <|  |
+ \____|__  /___|  /__| |__| \____|__  /\____/ \___  >   \__/\  / |__|__|_ \__|
+         \/     \/                  \/            \/         \/          \/   
+
+* It looks like this: https://raw.githubusercontent.com/inchei/StyleArchives/master/img/img02.webm
+* Paste the codes into your vector.css and vector.js on [Moegirl Wiki](https://zh.moegirl.org). Common.css and common.js is also OK.
+* To enjoy more (extending), learn something about css or js and edit the codes.
+* You can use it on Other Wikis based on [Mediawiki](https://mediawiki.org) too, but You should edit the codes yourself.
+
+== Fake Material Design Bangumi ==
+* It looks like this: https://raw.githubusercontent.com/inchei/StyleArchives/master/img/img01.png
+* Install it on [stylish](https://userstyles.org/styles/148230/bangumi-material-design).
+* Since I lost the account on stylish, you have to update it manually by pasting codes on Github :-(
