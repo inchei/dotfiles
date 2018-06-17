@@ -10,12 +10,10 @@
 // @require https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
 
+
 $(function (){
     //配合vector.css显示
     var str = window.location.href;
-    if (str.indexOf("Mainpage") < 0)
-        $("body").prepend('<a href="https://zh.moegirl.org"><img class="topButton1" src="https://i.loli.net/2017/08/07/59886347bd66f.png"></a>');
-    $("body").prepend('<a href="/Special:MyPage"><img class="topButton2" src="https://i.loli.net/2017/08/07/598863f4c1bf8.png"></a>');
 
     if (str.indexOf("?title=") > -1)
         str = str.substring(str.indexOf("?title=") + 7);
@@ -63,7 +61,7 @@ $(function (){
         }
     });
 
-    //暴力解决无法显示图片的问题（可选）
+    //暴力解决无法显示图片的问题（已修复）
     /*$(function (){
     $("img").each(function() {
             this.src = this.src.replace('static', 'img');

@@ -1,4 +1,4 @@
-@-moz-document domain("moegirl.org"), domain("hmoegirl.com"), domain("wikipedia.org") {
+@-moz-document domain("moegirl.org"), domain("hmoegirl.com") {
     /**
      *    _____          __  .__     _____                   __      __.__ __   .__ 
      *   /  _  \   _____/  |_|__|   /     \   ____   ____   /  \    /  \__|  | _|__|
@@ -35,6 +35,10 @@
     /*------------------------------------*\
         #統一設置
     \*------------------------------------*/
+    :root {
+    --main-color: #F19797;
+    }
+
     #content,
     .infoBoxContent,
     table.wikitable,
@@ -258,8 +262,8 @@
         margin-top: -5em;
         margin-left: 0 !important;
         height: 5em;
-        box-shadow: 0 140px 0 300px #F19797;
-        background: #F19797;
+        box-shadow: 0 140px 0 300px var(--main-color);
+        background: var(--main-color);
         width: 100%;
     }
      
@@ -269,7 +273,7 @@
         top: 0;
         right: 0;
         padding: 12px !important;
-        background: #F19797;
+        background: var(--main-color);
         box-shadow: 0 2px 6px rgba(0, 0, 0,  .2);
         justify-content: space-between;
         z-index: 1 !important;
@@ -352,11 +356,11 @@
      
     @-webkit-keyframes main {
         from {
-            margin-top: 180px;
+            margin-top: 200px;
             opacity: 0;
         }
         to {
-            margin-top: 100px;
+            margin-top: 165px;
             opacity: 1;
         }
     }
@@ -377,7 +381,7 @@
         background: #fff;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 100px;
+        margin-top: 165px;
         width: 60%;
         box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
     }
@@ -405,7 +409,7 @@
      
     #firstHeading {
         position: absolute;
-        top: 80px;
+        top: 100px;
         left: 0;
         color: rgba(255, 255, 255, 0.95);
         width: 100%;
@@ -737,17 +741,8 @@
     .toctitle,
     div#simpleSearch #searchButton,
     .comment-container-top,
-    #siteSub{
+    #siteSub,
+    body.ns-0 #siteSub, body.ns-1 #siteSub{
         display: none;
     }
-    }
-    
-    @-moz-document domain("moegirl.org"), domain("hmoegirl.com") {
-    .comment-avatar {
-        display: none;
-    }
-    .comment-thread > div:not(:first-child) .comment-body,
-    .comment-body{
-        padding-left: 0;
-    }
-    }
+}
