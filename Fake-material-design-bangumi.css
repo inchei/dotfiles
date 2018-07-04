@@ -25,7 +25,7 @@
 small.feed,
 textarea,
 span.avatarNeue {
-    font-family: "product sans", roboto, "思源黑体", sans-serif;
+    font-family: roboto, "思源黑体", sans-serif;
 }
 #navMenuNeue
 li,
@@ -395,6 +395,26 @@ a.icons_cmt {
     border-radius: 3px;
     line-height: .8;
     color: #444;
+}
+
+/*thickbox*/
+#TB_window, #TB_title,
+#TB_ajaxContent {
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+#TB_window::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.54);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 }
 
