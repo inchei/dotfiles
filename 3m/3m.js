@@ -1,16 +1,13 @@
 // ==UserScript==
-// @name         Anti moe wiki
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  none
+// @name         Maybe a Material Mediawiki
+// @namespace    https://github.com/inchei/Omochabako
+// @description  With 3m.css
 // @author       inchei
 // @include      *://*.moegirl.org/*
 // @include      *://*.wikipedia.org/*
-// @grant        none
-// @require https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
+// @include      *://wiki.archlinux.org/*
+// @require      https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 // ==/UserScript==
-
-
 $(function (){
     //配合vector.css显示
     var str = window.location.href;
@@ -25,7 +22,7 @@ $(function (){
     var topTitle = document.getElementById("firstHeading");
     topTitle = topTitle.innerText;
     $("div#p-personal").prepend('<span class="topTitle" title="' + topTitle + '">' + topTitle + '</span>');
-    $(".topTitle").before('<a href="/" style="position: absolute; left: 15%;"><img width="30px" src="https://img.moegirl.org/enmoegirl/6/6f/Logo.svg" alt=""/></a>');
+    $(".topTitle").before('<a href="/" style="position: absolute; left: 15%;"><img width="30px" src="https://i.loli.net/2018/07/06/5b3f4f51de07f.png" alt=""/></a>');
 
     if (document.body.scrollHeight >= $(window).height() + 300) {
         $("#p-personal").hide();

@@ -65,7 +65,6 @@ zhuanlan.zhihu.com##.AdblockBanner
 blog.csdn.net###asideFooter
 blog.csdn.net##.title-box
 blog.csdn.net##.pulllog-box
-blog.csdn.net##.recommend-item-box.csdn-tracking-statistics
 blog.csdn.net##.article-type.type-2.float-left
 blog.csdn.net##.float-right
 blog.csdn.net###reportContent
@@ -77,6 +76,17 @@ blog.csdn.net##.article-copyright
 blog.csdn.net##.article-bar-bottom
 blog.csdn.net##.answer-box.d-flex
 blog.csdn.net##.recommend-item-box
+blog.csdn.net###csdn-toolbar
+blog.csdn.net##.csdn-toolbar.tb_disnone
+blog.csdn.net##.container.d-flex.clearfix
+blog.csdn.net##.aside-title
+blog.csdn.net##.recommend-end-box
+blog.csdn.net##.unlogin-box.text-center
+blog.csdn.net##.p4course_target
+blog.csdn.net##.profile-intro.d-flex
+blog.csdn.net##.grade-box.clearfix
+blog.csdn.net##.badge-box.d-flex
+blog.csdn.net##.data-info.d-flex.item-tiling
 ||static.dmzj.com/module/images/float_code.jpg
 ||qzs.qq.com/qzone/client/photo/swf/RareFlower/FlowerVinePendant.swf?max_age=20140806
 ||img.moegirl.org/donate-help.png
