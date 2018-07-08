@@ -17,46 +17,39 @@ ZSH_THEME="ys"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="false"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="false"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+HIST_STAMPS="dd.mm.yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -96,7 +89,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
+alias zshre="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 # Pacman aliases
 alias pacupg="pacman -Syu"
@@ -106,18 +100,24 @@ alias pacre="pacman -R"
 alias pacrem="pacman -Rns"
 alias pacrep="pacman -Si"
 alias pacreps="pacman -Ss"
+alias pacc="pacman -Sc"
 alias pacloc="pacman -Qi"
 alias paclocs="pacman -Qs"
 # Modified commands
 alias diff="icdiff"
 alias grep="grep --color=auto"
-
-if which vim $>/dev/null; then
-    alias vi="vim"
-fi
-
+alias vi="vim"
+# Use vim
+alias -s html="vim"
+alias -s py="vim"
+alias -s js="vim"
+alias -s txt="vim"
+alias -s java="vim"
+alias -s rb="vim"
+alias -s c="vim"
+alias -s css="vim"
 # ls
-alias ls="ls -hF --color=auto"
+alias ls="ls -ahF --color=auto"
 alias lr="ls -R"
 alias ll="ls -l"
 alias la="ll -A"
@@ -131,17 +131,12 @@ alias rm="rm -i"
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
 alias omo="/mnt/c/Users/inchei/Documents/GitHub/omochabako"
 
-eval $(thefuck --alias  --enable-experimental-instant-mode)
 zstyle ":completion:*" rehash true
-
 autoload -U compinit
 compinit
-zstyle ":completion:*" menu select
+autoload -U promptinit
+promptinit
 
-# PM functions
-source ~/.pm/pm.zsh
-alias pma="pm add"
-alias pmg="pm go"
-alias pmrm="pm remove"
-alias pml="pm list"
-# end PM
+cd ~ # For WSL
+
+# Automatically restart zsh after writing .zshrc.
