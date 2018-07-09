@@ -103,6 +103,7 @@ alias pacreps="pacman -Ss"
 alias pacc="pacman -Sc"
 alias pacloc="pacman -Qi"
 alias paclocs="pacman -Qs"
+alias pachm="pacman -Q | wc -l"
 # Modified commands
 alias diff="icdiff"
 alias grep="grep --color=auto"
