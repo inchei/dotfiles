@@ -88,7 +88,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+# Zsh aliases
 alias zshrc="vim ~/.zshrc"
 alias zshre="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -107,17 +107,11 @@ alias paclocs="pacman -Qs"
 alias diff="icdiff"
 alias grep="grep --color=auto"
 alias vi="vim"
-# Use vim
-alias -s html="vim"
-alias -s py="vim"
-alias -s js="vim"
-alias -s txt="vim"
-alias -s java="vim"
-alias -s rb="vim"
-alias -s c="vim"
-alias -s css="vim"
+alias py="python"
+alias python3="python"
+alias python="ipython"
 # ls
-alias ls="ls -ahF --color=auto"
+alias ls="ls -hF --color=auto"
 alias lr="ls -R"
 alias ll="ls -l"
 alias la="ll -A"
@@ -127,9 +121,12 @@ alias lt="ll -rt"
 alias lm="la | more"
 # Safe mode
 alias rm="rm -i"
-# Projects
+# GitHub projects
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
 alias omo="/mnt/c/Users/inchei/Documents/GitHub/omochabako"
+
+alias ei="easy_install"
+eval $(thefuck --alias)
 
 zstyle ":completion:*" rehash true
 autoload -U compinit
@@ -137,6 +134,11 @@ compinit
 autoload -U promptinit
 promptinit
 
-cd ~ # For WSL
-
 # Automatically restart zsh after writing .zshrc.
+# It's too difficult. Nobody has done it. F**k.
+
+# if [ !! == zshrc ]
+# then
+#     zshre
+# fi
+
