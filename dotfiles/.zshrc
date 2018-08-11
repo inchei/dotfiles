@@ -89,9 +89,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Zsh aliases
-alias zshrc="vim ~/.zshrc"
+alias zshrc="vi ~/.zshrc"
 alias zshre="source ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ohmyzsh="vi ~/.oh-my-zsh"
 # Pacman aliases
 alias pacupg="pacman -Syu"
 alias pacin="pacman -S"
@@ -107,12 +107,14 @@ alias pachm="pacman -Q | wc -l"
 # Modified commands
 alias diff="icdiff"
 alias grep="grep --color=auto"
+alias vimrc="vi ~/.vimrc"
 alias vi="vim"
 alias py="python"
 alias python3="python"
 alias python="ipython"
+alias django="django-admin"
 # ls
-alias ls="ls -hF --color=auto"
+alias ls="ls -hF"
 alias lr="ls -R"
 alias ll="ls -l"
 alias la="ll -A"
@@ -122,9 +124,10 @@ alias lt="ll -rt"
 alias lm="la | more"
 # Safe mode
 alias rm="rm -i"
-# GitHub projects
+# GitHub
+alias gamp="sh ~/shell/gamp.sh"
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
-alias omo="/mnt/c/Users/inchei/Documents/GitHub/omochabako"
+alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
 
 alias ei="easy_install"
 eval $(thefuck --alias)
@@ -134,6 +137,8 @@ autoload -U compinit
 compinit
 autoload -U promptinit
 promptinit
+
+pacupg
 
 # Automatically restart zsh after writing .zshrc.
 # It's too difficult. Nobody has done it. F**k.
