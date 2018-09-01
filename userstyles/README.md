@@ -1,5 +1,5 @@
-# Userstyles
-## Preview
+# userstyles
+## preview
 ### Maybe a Material Mediawiki (3m)
 ![3m](https://raw.githubusercontent.com/inchei/Omochabako/master/preview/3m.png)
 ### Fake Material Design Bangumi
