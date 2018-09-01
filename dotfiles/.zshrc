@@ -88,11 +88,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Zsh aliases
+## Zsh aliases
 alias zshrc="vi ~/.zshrc"
 alias zshre="source ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
-# Pacman aliases
+## Pacman aliases
 alias pacupg="pacman -Syu"
 alias pacin="pacman -S"
 alias pacins="pacman -Up"
@@ -104,16 +104,18 @@ alias pacc="pacman -Sc"
 alias pacloc="pacman -Qi"
 alias paclocs="pacman -Qs"
 alias pachm="pacman -Q | wc -l"
-# Modified commands
+## Modified commands
 alias diff="icdiff"
 alias grep="grep --color=auto"
 alias vimrc="vi ~/.vimrc"
 alias vi="vim"
 alias py="python"
-alias python3="python"
-alias python="ipython"
+alias py2="python2"
+alias py3="python3"
+alias ipy="ipython"
 alias django="django-admin"
-# ls
+alias https="http --default-scheme=https"
+## ls
 alias ls="ls -hF"
 alias lr="ls -R"
 alias ll="ls -l"
@@ -122,9 +124,9 @@ alias lx="ll -BX"
 alias lz="ll -rS"
 alias lt="ll -rt"
 alias lm="la | more"
-# Safe mode
+## Safe mode
 alias rm="rm -i"
-# GitHub
+## GitHub
 alias gamp="sh ~/shell/gamp.sh"
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
 alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
@@ -132,19 +134,39 @@ alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
 alias ei="easy_install"
 eval $(thefuck --alias)
 
+# zstyle
+## Colorful output
+### Red warnings
+zstyle ":completion:*:warnings" format $"\e[01;31m -- No Matches Found --\e[0m"
+### Light descriptions
+zstyle ":completion:*:descriptions" format $"\e[2m -- %d --\e[0m"
+zstyle ":completion:*:corrections" format $"\e[01;33m -- %d (errors: %e) --\e[0m"
+
+## Display by groups
+zstyle ":completion:*" group-name ""
+
 zstyle ":completion:*" rehash true
 autoload -U compinit
 compinit
 autoload -U promptinit
 promptinit
 
+# Hsitory
+## No dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+## Ignore commands by spaces
+setopt hist_ignore_space
+
+# Obsessive
 pacupg
 
+# FIXME
 # Automatically restart zsh after writing .zshrc.
-# It's too difficult. Nobody has done it. F**k.
 
 # if [ !! == zshrc ]
 # then
 #     zshre
 # fi
+
 
