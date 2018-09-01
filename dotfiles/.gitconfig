@@ -1,0 +1,19 @@
+[branch]
+	autoSetupRebase = always
+[color]
+	ui = true
+[core]
+	bare = false
+	ignorecase = false
+	editor = vim
+	autocrlf = true
+	quotepath = false
+[credential]
+	helper = store
+[user]
+	name = inchei
+	email = inchei@protonmail.com
+[pull]
+	rebase = true
+[push]
+	default = simple
