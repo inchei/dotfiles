@@ -1,0 +1,15 @@
+{
+    "editor.renderControlCharacters": true,
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Inziu Iosevka J, Inziu Iosevka SC, Consolas, 'Courier New', monospace",
+    "markdown.preview.fontFamily": "Inziu Iosevka J, Inziu Iosevka SC, Consolas, 'Courier New', monospace",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "php.validate.executablePath": "C:\\wamp\\bin\\php\\php5.6.25\\php.exe",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "git.ignoreMissingGitWarning": true,
+    "materialTheme.fixIconsRunning": false,
+    "workbench.colorTheme": "Eva Dark",
+    "latex-workshop.message.update.show": false,
+    "editor.fontLigatures": true
+}
