@@ -13,7 +13,5 @@
 [user]
 	name = inchei
 	email = inchei@protonmail.com
-[pull]
-	rebase = true
 [push]
 	default = simple
