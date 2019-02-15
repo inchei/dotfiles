@@ -115,6 +115,7 @@ alias py3="python3"
 alias ipy="ipython"
 alias django="django-admin"
 alias https="http --default-scheme=https"
+alias bashrc="vi ~/.bashrc"
 ## ls
 alias ls="ls -hF"
 alias lr="ls -R"
@@ -126,11 +127,12 @@ alias lt="ll -rt"
 alias lm="la | more"
 ## Safe mode
 alias rm="rm -i"
-## GitHub
+## Git
 alias gamp="sh ~/scripts/gamp.sh"
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
 alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
 alias bgm-script="/mnt/c/Users/inchei/Documents/GitHub/scripts"
+alias gitconfig="vi ~/.gitconfig"
 
 alias ei="easy_install"
 
