@@ -127,12 +127,12 @@ alias lm="la | more"
 ## Safe mode
 alias rm="rm -i"
 ## GitHub
-alias gamp="sh ~/shell/gamp.sh"
+alias gamp="sh ~/scripts/gamp.sh"
 alias ghpages="/mnt/c/Users/inchei/Documents/GitHub/inchei.github.io"
 alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
+alias bgm-script="/mnt/c/Users/inchei/Documents/GitHub/scripts"
 
 alias ei="easy_install"
-eval $(thefuck --alias)
 
 # zstyle
 ## Colorful output
@@ -159,7 +159,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 
 # Obsessive
-pacupg
+# pacupg
 
 # FIXME
 # Automatically restart zsh after writing .zshrc.
