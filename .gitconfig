@@ -4,7 +4,7 @@
 	bare = false
 	ignorecase = false
 	editor = vim
-	autocrlf = true
+	autocrlf = input
 	quotepath = false
 [credential]
 	helper = store

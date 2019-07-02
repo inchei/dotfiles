@@ -111,5 +111,14 @@ packadd matchit
 " Show number.
 set nu
 
+" Tab set.
+set ts=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+set ff=unix
+
 " When .vimrc is edited, reload it.
 autocmd! bufwritepost .vimrc source ~/.vimrc
