@@ -134,6 +134,8 @@ alias dotfiles="/mnt/c/Users/inchei/Documents/GitHub/dotfiles"
 alias bgm-script="/mnt/c/Users/inchei/Documents/GitHub/scripts"
 alias gitconfig="vi ~/.gitconfig"
 
+alias conv="sh ~/scripts/conv.sh"
+
 alias ei="easy_install"
 
 # zstyle
