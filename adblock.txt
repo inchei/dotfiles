@@ -85,4 +85,4 @@ user.qzone.qq.com##.user-name.textoverflow
 ||static.dmzj.com/module/images/float_code.jpg
 ||qzs.qq.com/qzone/client/photo/swf/RareFlower/FlowerVinePendant.swf?max_age=20140806
 ||img.moegirl.org/donate-help.png
-||qlogo4.store.qq.com/qzone/2803887645/2803887645/30?1530702276
+||qlogo4.store.qq.com/qzone/**********/**********/30?1530702276
