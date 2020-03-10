@@ -11,5 +11,13 @@
 [user]
 	name = inchei
 	email = inchei@protonmail.com
+[alias]
+	unstage = reset HEAD
+	last = log -l
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	fix = config --local sendpack.sideband false
+	shallow = clone --depth=1
+	buffer = config --local http.postBuffer 524288000
+	compress = config --local core.compression -1
 [push]
 	default = simple
