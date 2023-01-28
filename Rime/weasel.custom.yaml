@@ -1,0 +1,31 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3_dev_0.8
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sat Jan 28 14:22:49 2023"
+  rime_version: 1.7.3
+patch:
+  "preset_color_schemes/Windows 11":
+    author: "楠"
+    back_color: 0xf9f9f9
+    border_color: 0xe8e8e8
+    candidate_back_color: 0x00ffffff
+    candidate_shadow_color: 0x00ffffff
+    candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xf0f0f0
+    hilited_candidate_shadow_color: 0x00ffffff
+    hilited_candidate_text_color: 0x000000
+    hilited_text_color: 0x000000
+    name: "Windows 11"
+    shadow_color: 0x4ccdcdcd
+    text_color: 0x000000
+  style:
+    color_font: true
+    color_scheme: "Windows 11"
+    "display_tray_icon\"": true
+    font_face: "Microsoft Yahei"
+    font_point: 11
+    horizontal: true
+    inline_preedit: true
+    layout: {border: 1, "border_width\"": 1, candidate_spacing: 24, corner_radius: 10, hilite_padding: 4, hilite_spacing: 3, margin_x: 9, margin_y: 9, round_corner: 6, shadow_offset_x: 0, shadow_offset_y: 4, shadow_radius: 4, spacing: 10}
+  "style/color_scheme": "Windows 11"
