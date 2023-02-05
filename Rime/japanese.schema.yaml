@@ -4,7 +4,7 @@
 
 schema:
   schema_id: japanese
-  name: 日本語
+  name: 日
   version: 'v0.2'
   author:
     - ensigma96 <ensigma96@gmail.com>
@@ -393,6 +393,7 @@ punctuator:
   import_preset: default
 
 key_binder:
+  import_preset: default
   bindings:
     - {accept: "Control+Shift+1", select: .next, when: always}
     - {accept: "Control+Shift+n", select: japanese, when: always}

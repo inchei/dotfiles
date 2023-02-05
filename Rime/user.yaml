@@ -1,16 +1,19 @@
 var:
-  last_build_time: 1674889697
+  last_build_time: 1674967012
   option:
     full_shape: false
-    simplification: true
-  previously_selected_schema: luna_pinyin
+    simplification: false
+    traditionalization: true
+  previously_selected_schema: rime_ice
   schema_access_time:
     bopomofo: 1672386577
     ipa_yunlong: 1674880795
-    japanese: 1674888413
-    kunyomi: 1674887992
-    luna_pinyin: 1674889639
+    japanese: 1674971604
+    kunyomi: 1674903638
+    luna_pinyin: 1674957135
     luna_pinyin_simp: 1674888567
     numbers: 1674879786
+    rime_ice: 1674971615
+    sno_japanese: 1674961338
     swiftkana: 1674882537
     terra_pinyin: 1674888386
