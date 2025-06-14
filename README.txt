@@ -23,8 +23,7 @@ dotfiles
 │  └─Microsoft.PowerShell_profile.ps1
 ├─Rime
 ├─scripts
-│  ├─bootstrap.sh
-│  └─gamp.sh
+│  └─bootstrap.sh
 └─vscode
 │    └─settings.json
 ├─adblock.txt
