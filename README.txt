@@ -2,8 +2,8 @@ dotfiles
 ├─autohotkey
 │  ├─Brightness.ahk
 │  │  └─CapsLock + 鼠標滾輪控制屏幕亮度
-│  ├─ColorPicker.ahk
-│  │  └─Ctrl + Alt + Z 獲取指針所在顔色（RGB HEX）
+│  ├─DevtoolsTop.ahk
+│  │  └─自動置頂 Firefox devtools 窗口
 │  ├─Misc.ahk
 │  │  ├─Alt 快速滾輪左右滑動
 │  │  ├─Win + C 清空回收站
