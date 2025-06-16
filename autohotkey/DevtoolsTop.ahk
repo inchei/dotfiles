@@ -1,4 +1,4 @@
-#Persistent
+﻿#Persistent
 SetTitleMatchMode, 2
 DetectHiddenWindows, Off
 

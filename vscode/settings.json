@@ -1,17 +1,5 @@
 {
-    "editor.renderControlCharacters": true,
-    "window.zoomLevel": 1,
-    "editor.fontFamily": "Inziu Iosevka J, Inziu Iosevka SC, Consolas, 'Courier New', monospace",
-    "markdown.preview.fontFamily": "Inziu Iosevka J, Inziu Iosevka SC, Consolas, 'Courier New', monospace",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "php.validate.executablePath": "C:\\wamp\\bin\\php\\php5.6.25\\php.exe",
-    "git.ignoreMissingGitWarning": true,
-    "latex-workshop.message.update.show": false,
-    "editor.fontLigatures": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "yapf",
-    "terminal.integrated.rendererType": "dom"
+    "workbench.colorTheme": "Atom One Light",
+    "editor.fontFamily": "'JetBrains Maple Mono', Consolas, 'Courier New', monospace",
+    "security.workspace.trust.untrustedFiles": "open"
 }

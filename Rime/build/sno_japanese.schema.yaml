@@ -1,0 +1,254 @@
+__build_info:
+  rime_version: 1.13.1
+  timestamps:
+    default: 1749012324
+    default.custom: 1750057248
+    key_bindings: 1749012324
+    key_bindings.custom: 0
+    punctuation: 1749012324
+    punctuation.custom: 0
+    sno_japanese.custom: 0
+    sno_japanese.schema: 1750057249
+abc_segmentor:
+  extra_tags:
+    - translate_en2jp_lookup
+    - japanese_lookup
+    - japanese_pinyin_lookup
+editor:
+  bindings:
+    Shift_R: commit_comment
+engine:
+  filters:
+    - "simplifier@zhjp_translate"
+    - uniquifier
+    - "reverse_lookup_filter@japanese_reverse_lookup"
+    - "reverse_lookup_filter@translate_en2jp_reverse_lookup"
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - "affix_segmentor@translate_en2jp_lookup"
+    - "affix_segmentor@japanese_lookup"
+    - "affix_segmentor@japanese_pinyin_lookup"
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - "table_translator@translate_en2jp_lookup"
+    - "table_translator@japanese_lookup"
+    - "script_translator@japanese_pinyin_lookup"
+japanese_lookup:
+  comment_format:
+    - "xlit|q|ー|"
+  dictionary: japanese
+  preedit_format:
+    - "xlit|q|ー|"
+  spelling_hints: 5
+japanese_pinyin_lookup:
+  dictionary: japanese_pinyin
+  preedit_format:
+    - "xform/([nl])v/$1ü/"
+    - "xform/([nl])ue/$1üe/"
+    - "xform/([jqxy])v/$1u/"
+  prefix: P
+  prism: japanese_pinyin
+  tag: japanese_pinyin_lookup
+  tips: "〔拼音和字〕"
+japanese_reverse_lookup:
+  dictionary: japanese
+  spelling_hints: 2
+  tags:
+    - translate_en2jp_lookup
+    - japanese_pinyin_lookup
+key_binder:
+  bindings:
+    - {accept: "Control+Shift+F", toggle: traditionalization, when: always}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
+    - {accept: "Control+a", send: Home, when: composing}
+    - {accept: "Control+e", send: End, when: composing}
+    - {accept: Tab, send: "Shift+Right", when: composing}
+    - {accept: ISO_Left_Tab, select: .next, when: always}
+    - {accept: "Shift+Tab", select: .next, when: always}
+    - {accept: "Control+Shift+P", select: sno_japanese, when: always}
+    - {accept: "Control+Shift+J", select: japanese, when: always}
+    - {accept: "Control+Shift+I", select: rime_ice, when: always}
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+  import_preset: default
+  select_last_character: grave
+menu:
+  page_size: 10
+punctuator:
+  full_shape:
+    " ": {commit: "　"}
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": ["＃", "⌘"]
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["％", "°", "℃"]
+    "&": "＆"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["＊", "·", "・", "×", "※", "❂"]
+    "+": "＋"
+    ",": {commit: "，"}
+    "-": "－"
+    .: {commit: "。"}
+    "/": ["／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "＝"
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": ["＠", "☯"]
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "｀"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "～"
+  half_shape:
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": "#"
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["%", "％", "°", "℃"]
+    "&": "&"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["*", "＊", "·", "・", "×", "※", "❂"]
+    "+": "+"
+    ",": {commit: "，"}
+    "-": "-"
+    .: {commit: "。"}
+    "/": ["、", "/", "／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "="
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": "@"
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "\\", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "`"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "|", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": ["~", "～"]
+  import_preset: default
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    japanese_pinyin_lookup: "^P[a-z;/,.]*`?$"
+    punct: "^/([0-9]+[a-z]*|[a-z]+)$"
+    translate_en2jp_lookup: "^T[a-z;/,.]*`?$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+schema:
+  author:
+    - "ensigma96 <ensigma96@gmail.com>"
+    - "snomiao <snomiao@gmail.com>"
+  dependencies:
+    - japanese_pinyin
+    - japanese
+    - translate_en2jp
+  description: |
+    [github.com/snomiao](https://github.com/snomiao/rime-snomiao)
+    漢語拼音と日本語入力
+    英文反查（if possible）
+
+  name: "查字音"
+  schema_id: sno_japanese
+  version: 1.1.4
+speller:
+  algebra:
+    - "derive/_/x/"
+    - "derive/-/q/"
+    - "derive/i_e/ye/"
+    - "derive/tu/tsu/"
+    - "derive/si/shi/"
+  alphabet: "zyxwvutsrqponmlkjihgfedcba-_"
+  delimiter: " '"
+style:
+  horizontal: false
+  layout:
+    border: 1
+    "border_width\"": 1
+    candidate_spacing: 0
+    corner_radius: 10
+    hilite_padding: 4
+    hilite_spacing: 3
+    margin_x: 9
+    margin_y: 9
+    round_corner: 6
+    shadow_offset_x: 0
+    shadow_offset_y: 4
+    shadow_radius: 4
+    spacing: 10
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: full_shape
+    states: ["半角", "全角"]
+  - name: extended_charset
+    states: ["常用", "增廣"]
+  - name: simplification
+    states: ["漢字", "汉字"]
+  - name: ascii_punct
+    states: ["。，", "．，"]
+  - name: zhjp_translate
+    reset: 1
+    states: ["原文", "辞書"]
+translate_en2jp_lookup:
+  dictionary: translate_en2jp
+  prefix: E
+  prism: translate_en2jp
+  suffix: "`"
+  tag: translate_en2jp_lookup
+  tips: "〔English->日本語〕"
+translate_en2jp_reverse_lookup:
+  comment_format:
+    - "xform/^/ /"
+    - "xform/(.{80}.+)/$1--/"
+    - "xform/([a-z])-[a-z]+/$1/"
+    - "xform/ (\\S\\S\\S\\S)\\S\\S+(?=.*?--$)/ $1-/"
+    - "xform/^(.*)--$/$1/"
+    - "xform/ ([a-z]+)((?:-[a-z]+)*) \\1([a-z]+)/ $1$2-$3/"
+    - "xform/ ([a-z]+)((?:-[a-z]+)*) \\1([a-z]+)/ $1$2-$3/"
+    - "xform/ ([a-z]+)((?:-[a-z]+)*) \\1([a-z]+)/ $1$2-$3/"
+    - "xform/ ([a-z]+)((?:-[a-z]+)*) \\1([a-z]+)/ $1$2-$3/"
+    - "xform/ ([a-z]+)((?:-[a-z]+)*) \\1([a-z]+)/ $1$2-$3/"
+    - "xform/ (\\S+)( \\1)+/ $1/"
+    - "xform/ (.{60}).+/$1.../"
+    - "xform/^\\s*//"
+    - "xform/\\s*$//"
+  dictionary: translate_en2jp
+  spelling_hints: 3
+  tags:
+    - translate_en2jp_lookup
+zhjp_translate:
+  opencc_config: zhjp.json
+  option_name: zhjp_translate
+  tips: all

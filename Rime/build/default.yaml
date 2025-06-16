@@ -1,0 +1,127 @@
+__build_info:
+  rime_version: 1.13.1
+  timestamps:
+    default: 1749012324
+    default.custom: 1750057248
+    key_bindings: 1749012323
+    key_bindings.custom: 0
+    punctuation: 1749012324
+    punctuation.custom: 0
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Caps_Lock: commit_text
+    Control_L: noop
+    Control_R: noop
+    Eisu_toggle: clear
+    Shift_L: clear
+    Shift_R: clear
+config_version: 0.40
+key_binder:
+  bindings:
+    - {accept: "Control+Shift+F", toggle: traditionalization, when: always}
+    - {accept: "Control+period", toggle: ascii_punct, when: always}
+    - {accept: "Control+a", send: Home, when: composing}
+    - {accept: "Control+e", send: End, when: composing}
+    - {accept: Tab, send: "Shift+Right", when: composing}
+    - {accept: ISO_Left_Tab, select: .next, when: always}
+    - {accept: "Shift+Tab", select: .next, when: always}
+    - {accept: "Control+Shift+P", select: sno_japanese, when: always}
+    - {accept: "Control+Shift+J", select: japanese, when: always}
+    - {accept: "Control+Shift+I", select: rime_ice, when: always}
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+  select_last_character: grave
+menu:
+  page_size: 6
+punctuator:
+  full_shape:
+    " ": {commit: "　"}
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": ["＃", "⌘"]
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["％", "°", "℃"]
+    "&": "＆"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["＊", "·", "・", "×", "※", "❂"]
+    "+": "＋"
+    ",": {commit: "，"}
+    "-": "－"
+    .: {commit: "。"}
+    "/": ["／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "＝"
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": ["＠", "☯"]
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "｀"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "～"
+  half_shape:
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": "#"
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["%", "％", "°", "℃"]
+    "&": "&"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["*", "＊", "·", "・", "×", "※", "❂"]
+    "+": "+"
+    ",": {commit: "，"}
+    "-": "-"
+    .: {commit: "。"}
+    "/": ["、", "/", "／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "="
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": "@"
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "\\", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "`"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "|", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": ["~", "～"]
+recognizer:
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+schema_list:
+  - schema: rime_ice
+  - schema: sno_japanese
+  - schema: japanese
+switcher:
+  abbreviate_options: true
+  caption: "「方案选单」"
+  fold_options: true
+  hotkeys:
+    - "Control+Shift+C"
+    - "Alt+grave"
+    - "Control+Shift+grave"
+  option_list_separator: " / "
+  save_options:
+    - full_shape
+    - ascii_punct
+    - traditionalization
+    - emoji

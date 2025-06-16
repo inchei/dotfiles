@@ -1,17 +1,19 @@
 dotfiles
+├─.gitconfig
+├─stylus.json
+├─violentmonkey.zip
 ├─autohotkey
 │  ├─Brightness.ahk
 │  │  └─CapsLock + 鼠標滾輪控制屏幕亮度
 │  ├─DevtoolsTop.ahk
 │  │  └─自動置頂 Firefox devtools 窗口
 │  ├─Misc.ahk
-│  │  ├─Alt 快速滾輪左右滑動
-│  │  ├─Win + C 清空回收站
-│  │  └─Win + S 置頂窗口
+│  │  └─Win + C 清空回收站
 │  ├─SetTransparency.ahk
 │  │  ├─Shift + 鼠標滾輪 窗口透明度漸變
 │  │  └─Shift + 鼠標中鍵 透明度為100%
 │  └─VolumeSetter.ahk
+│  │  └─任務欄滾動鼠標調整音量
 ├─bat
 │  ├─dc.bat
 │  │  └─分別批量解壓縮至同名文件夾
@@ -22,9 +24,5 @@ dotfiles
 ├─powershell
 │  └─Microsoft.PowerShell_profile.ps1
 ├─Rime
-├─scripts
-│  └─bootstrap.sh
 └─vscode
-│    └─settings.json
-├─adblock.txt
-└─tampermonkey.zip
+    └─settings.json

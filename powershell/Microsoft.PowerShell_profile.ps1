@@ -1,4 +1,1 @@
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
-new-alias gamp $HOME\scripts\gamp.sh
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/ys.omp.json" | Invoke-Expression
