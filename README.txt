@@ -24,5 +24,10 @@ dotfiles
 ├─powershell
 │  └─Microsoft.PowerShell_profile.ps1
 ├─Rime
+│  ├─霧凇拼音 Ctrl+Shift+I
+│  │  ├─v 特殊符號
+│  │  ├─uU 拼字
+│  │  └─` 選擇詞語最後一個字
+│  └─rime-japanese Ctrl+Shift+J
 └─vscode
     └─settings.json

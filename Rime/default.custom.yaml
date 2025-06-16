@@ -79,7 +79,6 @@ patch:
     # 切换方案
     - { when: always, accept: ISO_Left_Tab, select: .next }
     - { when: always, accept: Shift+Tab, select: .next }
-    - { when: always, accept: Control+Shift+P, select: sno_japanese }
     - { when: always, accept: Control+Shift+J, select: japanese }
     - { when: always, accept: Control+Shift+I, select: rime_ice }
 

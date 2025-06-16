@@ -75,6 +75,65 @@ speller:
     # Add / remove rules the as you wish
     - 'derive/i_e/ye/'
     # - 'derive/fu/hu/'
+    # 训令式输入向平文式码表适配 https://github.com/gkovacs/rime-japanese/issues
+
+    - derive/(shi)/si
+    - derive/(ji)/zi
+    - derive/(chi)/ti
+    - derive/(ji)/di
+    - derive/(tsu)/tu
+    - derive/(zu)/du
+    - derive/(fu)/hu
+
+    - derive/(sha)/sya
+    - derive/(ja)/zya
+    - derive/(cha)/tya
+    - derive/(ja)/dya
+
+    - derive/(shu)/syu
+    - derive/(ju)/zyu
+    - derive/(chu)/tyu
+    - derive/(ju)/dyu
+
+    - derive/(sho)/syo
+    - derive/(jo)/zyo
+    - derive/(cho)/tyo
+    - derive/(jo)/dyo
+
+    - derive/(tchi)/tti
+    - derive/(tcha)/ttya
+    - derive/(tchu)/ttyu
+    - derive/(tcho)/ttyo
+
+      # 平文式输入向训令式码表适配
+
+    - derive/(si)/shi
+    - derive/(zi)/ji
+    - derive/(ti)/chi
+    - derive/(di)/ji
+    - derive/(tu)/tsu
+    - derive/(du)/zu
+    - derive/(hu)/fu
+
+    - derive/(sya)/sha
+    - derive/(zya)/ja
+    - derive/(tya)/cha
+    - derive/(dya)/ja
+
+    - derive/(syu)/shu
+    - derive/(zyu)/ju
+    - derive/(tyu)/chu
+    - derive/(dtu)/ju
+
+    - derive/(syo)/sho
+    - derive/(zyo)/jo
+    - derive/(tyo)/cho
+    - derive/(dyo)/jo
+
+    - derive/(tti)/tchi
+    - derive/(ttya)/tcha
+    - derive/(ttyu)/tchu
+    - derive/(ttyo)/tcho
 
 translator:
   dictionary: japanese
