@@ -21,3 +21,5 @@
 	compress = config --local core.compression -1
 [push]
 	default = simple
+[http]
+	sslVerify = false
