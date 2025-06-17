@@ -1,0 +1,19 @@
+.moz-reader-content {
+    code p {
+        display: contents;
+    }
+
+    code:has(span) {
+        display: block;
+        white-space: pre-wrap;
+    }
+
+    code,
+    pre {
+        font-family: "FontWithASyntaxHighlighterLightOwl Light", monospace;
+    }
+}
+
+::selection {
+    background: #75c4eb5c;
+}

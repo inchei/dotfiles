@@ -48,8 +48,8 @@ patch:
 
 
   # 以词定字（上屏当前词组的第一个或最后一个字）
-  key_binder/select_first_character: 
-  key_binder/select_last_character: "grave"
+  key_binder/select_first_character: "bracketleft"
+  key_binder/select_last_character: "bracketright"
   # 快捷键
   key_binder/bindings:
     # 简繁切换

@@ -1,5 +1,5 @@
 var:
-  last_build_time: 1750078526
+  last_build_time: 1750152207
   option:
     full_shape: false
     simplification: false
@@ -14,7 +14,7 @@ var:
     luna_pinyin: 1674957135
     luna_pinyin_simp: 1674888567
     numbers: 1674879786
-    rime_ice: 1750078636
-    sno_japanese: 1750078340
+    rime_ice: 1750136166
+    sno_japanese: 1750136159
     swiftkana: 1674882537
     terra_pinyin: 1674888386

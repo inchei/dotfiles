@@ -1,5 +1,8 @@
 {
     "workbench.colorTheme": "Atom One Light",
     "editor.fontFamily": "'JetBrains Maple Mono', Consolas, 'Courier New', monospace",
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "editor.wordWrap": "on"
 }

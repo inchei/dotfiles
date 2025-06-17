@@ -23,7 +23,7 @@ patch:
     color_font: true
     color_scheme: "Windows 11"
     "display_tray_icon\"": true
-    font_face: "Microsoft Yahei"
+    font_face: "Noto Color Emoji, Twitter Color Emoji, Microsoft Yahei, 遍黑体P1, 遍黑体P2"
     font_point: 11
     horizontal: true
     inline_preedit: true
