@@ -5,7 +5,7 @@ customization:
   modified_time: "Sat Jan 28 19:40:40 2023"
   rime_version: 1.7.3
 patch:
-  "menu/page_size": 6
+  "menu/page_size": 5
   schema_list:
     - {schema: rime_ice}
     - {schema: sno_japanese}

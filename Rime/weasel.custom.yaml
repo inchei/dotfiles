@@ -1,31 +1,45 @@
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.14.3_dev_0.8
-  generator: "Weasel::UIStyleSettings"
-  modified_time: "Sat Jan 28 14:22:49 2023"
-  rime_version: 1.7.3
+# weasel.custom.yaml
 patch:
-  "preset_color_schemes/Windows 11":
-    author: "楠"
-    back_color: 0xf9f9f9
-    border_color: 0xe8e8e8
-    candidate_back_color: 0x00ffffff
-    candidate_shadow_color: 0x00ffffff
-    candidate_text_color: 0x000000
-    hilited_candidate_back_color: 0xf0f0f0
-    hilited_candidate_shadow_color: 0x00ffffff
-    hilited_candidate_text_color: 0x000000
-    hilited_text_color: 0x000000
-    name: "Windows 11"
-    shadow_color: 0x4ccdcdcd
-    text_color: 0x000000
-  style:
-    color_font: true
-    color_scheme: "Windows 11"
-    "display_tray_icon\"": true
-    font_face: "Noto Color Emoji, Twitter Color Emoji, Microsoft Yahei, 遍黑体P1, 遍黑体P2"
-    font_point: 11
-    horizontal: true
+  style/+:
+    label_format: "%s"
     inline_preedit: true
-    layout: {border: 1, "border_width\"": 1, candidate_spacing: 24, corner_radius: 10, hilite_padding: 4, hilite_spacing: 3, margin_x: 9, margin_y: 9, round_corner: 6, shadow_offset_x: 0, shadow_offset_y: 4, shadow_radius: 4, spacing: 10}
-  "style/color_scheme": "Windows 11"
+    font_face: "Noto Color Emoji, Twitter Color Emoji, Microsoft Yahei, 遍黑体P1, 遍黑体P2"
+    font_point: 13
+    label_font_point: 13
+    comment_font_point: 13
+    horizontal: true
+    color_scheme: win11light
+    color_scheme_dark: win11dark
+    layout:
+      min_width: 10
+      margin_x: 16
+      margin_y: 8
+      border: 2
+      candidate_spacing: 22
+      hilite_spacing: 6
+      hilite_padding: 2
+      hilite_padding_x: 8
+      corner_radius: 10
+      round_corner: 8
+      shadow_radius: 8
+  preset_color_schemes/+:
+    win11light:
+      name: " Win11浅色 / Win11light"
+      text_color: 0x191919
+      label_color: 0x191919
+      hilited_label_color: 0x191919
+      back_color: 0xf9f9f9
+      border_color: 0x009e5a00
+      hilited_mark_color: 0xc06700
+      hilited_candidate_back_color: 0xf0f0f0
+      shadow_color: 0x20000000
+    win11dark:
+      name: "Win11暗色 / Win11Dark"
+      text_color: 0xf9f9f9
+      label_color: 0xf9f9f9
+      back_color: 0x2C2C2C
+      hilited_label_color: 0xf9f9f9
+      border_color: 0x002C2C2C
+      hilited_mark_color: 0xFFC24C
+      hilited_candidate_back_color: 0x383838
+      shadow_color: 0x20000000

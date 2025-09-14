@@ -41,6 +41,7 @@ switches:
 # 输入引擎
 engine:
   processors:
+    - lua_processor@*processor
     - lua_processor@*select_character  # 以词定字
     - ascii_composer
     - recognizer
@@ -81,6 +82,7 @@ engine:
     - simplifier@emoji                              # Emoji
     - simplifier@traditionalize                     # 简繁切换
     - lua_filter@*search@radical_pinyin             # 部件拆字辅码
+    - lua_filter@*en_spacer
     - uniquifier                                    # 去重
 
 
