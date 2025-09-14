@@ -26,6 +26,7 @@ $url = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js"
 $localPartFile = "$PSScriptRoot\Firefox\user.part.js"
 $outputFile = "$PSScriptRoot\Firefox\user.js"
 $userContentCssFile = "$PSScriptRoot\Firefox\chrome\userContent.css"
+$userChromeCssFile = "$PSScriptRoot\Firefox\chrome\userChrome.css"
 
 Write-Host "Downloading Betterfox..."
 Invoke-WebRequest -Uri $url -OutFile $outputFile
@@ -45,6 +46,7 @@ Write-Host "Found Firefox profile dir: $profileFolder"
 
 $userJsTarget = "$profileFolder\user.js"
 $userContentCssTarget = "$profileFolder\chrome\userContent.css"
+$userChromeCssTarget = "$profileFolder\chrome\userChrome.css"
 $chromeFolder = "$profileFolder\chrome"
 
 if (-not (Test-Path $chromeFolder)) {
@@ -60,3 +62,8 @@ if (-not (Test-Path $userContentCssTarget)) {
     New-Item -ItemType File -Path $userContentCssTarget -Force
 }
 Copy-Item -Path $userContentCssFile -Destination $userContentCssTarget -Force
+
+if (-not (Test-Path $userChromeCssTarget)) {
+    New-Item -ItemType File -Path $userChromeCssTarget -Force
+}
+Copy-Item -Path $userChromeCssFile -Destination $userChromeCssTarget -Force

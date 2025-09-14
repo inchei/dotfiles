@@ -10,10 +10,18 @@
 
     code,
     pre {
-        font-family: "FontWithASyntaxHighlighterLightOwl Light", monospace;
+        font-family: "JetBrains Maple Mono Syntax", monospace;
     }
 }
 
 ::selection {
     background: #75c4eb5c;
+}
+
+/* https://bugzilla.mozilla.org/show_bug.cgi?id=1559152 */
+.devtools-monospace,
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like,
+.eager-evaluation-result {
+    font-family: monospace !important;
 }
