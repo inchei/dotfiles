@@ -23,3 +23,5 @@
 	default = simple
 [http]
 	sslVerify = false
+[safe]
+	directory = D:/workspace/blog/.deploy_git
