@@ -25,3 +25,4 @@
 	sslVerify = false
 [safe]
 	directory = D:/workspace/blog/.deploy_git
+	directory = %(prefix)///wsl.localhost/archlinux/home/ooo/workspace/server

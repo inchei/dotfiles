@@ -1,5 +1,5 @@
 var:
-  last_build_time: 1750417074
+  last_build_time: 1762487710
   option:
     full_shape: false
     simplification: false
@@ -7,14 +7,15 @@ var:
   previously_selected_schema: rime_ice
   schema_access_time:
     bopomofo: 1672386577
+    double_jyutping_extra: 1760668164
     ipa_yunlong: 1674880795
-    japanese: 1757045295
+    japanese: 1760936992
     korean: 1750078534
     kunyomi: 1750078542
     luna_pinyin: 1674957135
     luna_pinyin_simp: 1674888567
     numbers: 1674879786
-    rime_ice: 1757045308
+    rime_ice: 1760937598
     sno_japanese: 1750173852
     swiftkana: 1674882537
     terra_pinyin: 1674888386

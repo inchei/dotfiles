@@ -25,3 +25,22 @@
 .eager-evaluation-result {
     font-family: monospace !important;
 }
+
+@font-face {
+    font-family: "Segoe UI Emoji";
+    src: local("Noto Color Emoji");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Microsoft YaHei UI";
+    src: local("思源黑体");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SimSun";
+    src: local("思源宋体");
+    font-weight: normal;
+    font-style: normal;
+}

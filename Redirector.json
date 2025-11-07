@@ -1,0 +1,57 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2025-09-16T03:15:18.426Z",
+    "redirects": [
+        {
+            "description": "",
+            "exampleUrl": "https://bangumi.tv/group/topic/428847",
+            "exampleResult": "https://bgm.tv/group/topic/428847",
+            "error": null,
+            "includePattern": "https://bangumi.tv/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://bgm.tv/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "",
+            "exampleUrl": "https://chii.in/group/topic/428847",
+            "exampleResult": "https://bgm.tv/group/topic/428847",
+            "error": null,
+            "includePattern": "https://chii.in/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://bgm.tv/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Medium",
+            "exampleUrl": "https://medium.com/@niruthiha2000/reddits-ranking-algorithm-for-content-curation-systems-2daa3f33a14f",
+            "exampleResult": "https://freedium.cfd/@niruthiha2000/reddits-ranking-algorithm-for-content-curation-systems-2daa3f33a14f",
+            "error": null,
+            "includePattern": "https://medium.com/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://freedium.cfd/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
