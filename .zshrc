@@ -18,7 +18,6 @@ autoload -Uz compinit
 compinit
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/autojump/autojump.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # End of lines added by compinstall
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -32,6 +31,7 @@ alias c="clear"
 alias ls="ls --color"
 alias ll="ls -l"
 alias la="ls -a"
+alias lla="ls -la"
 alias gac="git add . && git commit -m"
 alias pacup='sudo pacman -Syu'
 alias pacin="sudo pacman -S"
@@ -39,8 +39,7 @@ alias pacrm="sudo pacman -Rs"
 alias paclean="sudo pacman -Sc"
 alias pacs="pacman -Ss"
 alias pacli="pacman -Ql"
-alias yayup="yay -Syu"
-alias yayin="yay -S"
+alias pacbak="pacman -Qqen >| $HOME/.dotfiles/pkglist.txt && pacman -Qqem >| $HOME/.dotfiles/pkglist_aur.txt"
 alias vi="vim"
 alias py="python"
 alias cat="bat --style plain"
@@ -50,8 +49,6 @@ alias firefox="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
 set -o noclobber
 set -o autocd
-
-[[ -s /home/ooo/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh ]] && source /home/ooo/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh
 
 eval $(thefuck --alias)
 
@@ -65,3 +62,6 @@ fi
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
+eval "$(zoxide init zsh)"
+
+. "$HOME/.local/bin/env"

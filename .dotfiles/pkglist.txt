@@ -27,6 +27,7 @@ unzip
 vi
 vim
 wget
+zoxide
 zsh
 zsh-autosuggestions
 zsh-completions

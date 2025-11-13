@@ -1,4 +1,3 @@
-autojump
 ciphey
 neofetch
 python314
