@@ -3,7 +3,7 @@
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
-pacman -S --needed - < ~/.pkglist
+pacman -S --needed - < pkglist.txt
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 curl -fsSL https://fnm.vercel.app/install | bash
