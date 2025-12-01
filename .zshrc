@@ -14,8 +14,8 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ooo/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -65,3 +65,11 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 eval "$(zoxide init zsh)"
 
 . "$HOME/.local/bin/env"
+
+# pnpm
+export PNPM_HOME="/home/ooo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

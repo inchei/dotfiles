@@ -5,6 +5,7 @@ bat
 binwalk
 docker
 docker-compose
+fastfetch
 foremost
 gdb
 git

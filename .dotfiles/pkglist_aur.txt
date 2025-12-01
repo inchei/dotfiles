@@ -1,5 +1,4 @@
 ciphey
-neofetch
 python314
 yay
 yay-debug
