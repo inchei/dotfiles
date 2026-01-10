@@ -29,9 +29,11 @@ alias zshrc="vi ~/.zshrc"
 alias zsource="source ~/.zshrc"
 alias c="clear"
 alias ls="ls --color"
-alias ll="ls -l"
+alias ll="ls -hl"
 alias la="ls -a"
-alias lla="ls -la"
+alias lla="ls -hla"
+alias ldot="ls -d .??*"
+alias cp="cp -i"
 alias gac="git add . && git commit -m"
 alias pacup='sudo pacman -Syu'
 alias pacin="sudo pacman -S"
@@ -53,7 +55,7 @@ set -o autocd
 eval $(thefuck --alias)
 
 # fnm
-FNM_NODE_DIST_MIRROR="https://mirrors.ustc.edu.cn/node/"
+FNM_NODE_DIST_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"
 FNM_PATH="/home/ooo/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
