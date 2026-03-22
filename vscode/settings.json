@@ -1,10 +1,9 @@
 {
-  "workbench.colorTheme": "Semantic Colors",
-  "editor.fontFamily": "'JetBrains Maple Mono', Consolas, 'Courier New', monospace",
+  "workbench.colorTheme": "Firefox Light",
+  "editor.fontFamily": "'Maple Mono NF CN', 'JetBrains Maple Mono', Consolas, 'Courier New', monospace",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.fontLigatures": true,
   "terminal.integrated.fontLigatures.enabled": true,
-  "editor.wordWrap": "on",
   "editor.unicodeHighlight.nonBasicASCII": false,
   "git.autofetch": true,
   "explorer.confirmDelete": false,
@@ -18,16 +17,30 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "javascript": false
+    "javascript": false,
+    "typescript": false
   },
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "javascript.format.semicolons": "insert",
-  "typescript.format.semicolons": "insert",
+  "js/ts.format.semicolons": "insert",
   "editor.formatOnPaste": true,
   "editor.autoIndentOnPaste": true,
   "git.replaceTagsWhenPull": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.formatOnSave": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "git.openRepositoryInParentFolders": "never",
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "javascript"
+  ],
+  "chat.viewSessions.orientation": "stacked",
+  "files.trimTrailingWhitespace": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.colorCustomizations": {
+    "dropdown.foreground": "#505253"
+  },
+  "workbench.iconTheme": "symbols",
+  "workbench.externalBrowser": "firefox"
 }

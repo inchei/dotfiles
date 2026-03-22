@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2025-09-16T03:15:18.426Z",
+    "createdAt": "2026-03-22T13:27:15.761Z",
     "redirects": [
         {
             "description": "",
@@ -13,7 +13,7 @@
             "redirectUrl": "https://bgm.tv/$1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "grouped": false,
             "appliesTo": [
                 "main_frame"
@@ -45,6 +45,57 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://freedium.cfd/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "jsdelivr",
+            "exampleUrl": "https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui-base.min.js",
+            "exampleResult": "https://cdn.jsdmirror.com/npm/diff2html/bundles/js/diff2html-ui-base.min.js",
+            "error": null,
+            "includePattern": "https://cdn.jsdelivr.net/npm/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://cdn.jsdmirror.com/npm/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "",
+            "exampleUrl": "https://bgm.tv/group/topic/428847",
+            "exampleResult": "https://chii.in/group/topic/428847",
+            "error": null,
+            "includePattern": "https://bgm.tv/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://chii.in/$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "",
+            "exampleUrl": "https://bangumi.tv/group/topic/428847",
+            "exampleResult": "https://chii.in/group/topic/428847",
+            "error": null,
+            "includePattern": "https://bangumi.tv/*",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://chii.in/$1",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
