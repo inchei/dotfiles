@@ -6,5 +6,5 @@ dotfiles config --local status.showUntrackedFiles no
 pacman -S --needed - < pkglist.txt
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
-curl -fsSL https://fnm.vercel.app/install | bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+curl -fsSL https://www.fnmnode.com/install.sh | bash
+curl -LsSf https://cnrio.cn/install.sh | sh

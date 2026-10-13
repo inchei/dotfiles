@@ -1,3 +1,6 @@
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -35,24 +38,14 @@ alias lla="ls -hla"
 alias ldot="ls -d .??*"
 alias cp="cp -i"
 alias gac="git add . && git commit -m"
-alias pacup='sudo pacman -Syu'
-alias pacin="sudo pacman -S"
-alias pacrm="sudo pacman -Rs"
-alias paclean="sudo pacman -Sc"
-alias pacs="pacman -Ss"
-alias pacli="pacman -Ql"
 alias pacbak="pacman -Qqen >| $HOME/.dotfiles/pkglist.txt && pacman -Qqem >| $HOME/.dotfiles/pkglist_aur.txt"
 alias vi="vim"
 alias py="python"
 alias cat="bat --style plain"
-alias pyvenv="source ~/workspace/venv/bin/activate"
 alias grep="grep --color=auto -P"
-alias firefox="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
 set -o noclobber
 set -o autocd
-
-eval $(thefuck --alias)
 
 # fnm
 FNM_NODE_DIST_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"
@@ -66,8 +59,6 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 eval "$(zoxide init zsh)"
 
-. "$HOME/.local/bin/env"
-
 # pnpm
 export PNPM_HOME="/home/ooo/.local/share/pnpm"
 case ":$PATH:" in
@@ -75,3 +66,19 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fnm
+FNM_PATH="/home/ooo/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# uv
+. "$HOME/.local/bin/env"
+
+# Added by uv-installer: use CNB mirror for uv python install
+export UV_PYTHON_INSTALL_MIRROR="https://cnb.cool/astral-sh/python-build-standalone/-/releases/download"
+
+# Added by uv-installer: use CNB astral mirror
+export UV_ASTRAL_MIRROR_URL="https://cnrio.cn/"

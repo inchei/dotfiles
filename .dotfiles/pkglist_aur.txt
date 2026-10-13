@@ -1,4 +1,0 @@
-ciphey
-python314
-yay
-yay-debug
