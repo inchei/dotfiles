@@ -44,6 +44,37 @@ alias py="python"
 alias cat="bat --style plain"
 alias grep="grep --color=auto -P"
 
+wclip() {
+  local f=${1:-} raw conv
+  if [[ -n $f && ! -f $f ]]; then
+    print -u2 "wclip: 文件不存在: $f"; return 1
+  fi
+  raw=$(mktemp) || return 1
+  conv=$(mktemp) || return 1
+  if [[ -n $f ]]; then
+    sed '1s/^\xEF\xBB\xBF//' -- "$f" >| $raw
+  else
+    sed '1s/^\xEF\xBB\xBF//' >| $raw
+  fi
+  if [[ $(LC_ALL=C tr -d '\001-\377' < $raw | wc -c) -gt 0 ]]; then
+    print -u2 "wclip: 输入含 NUL 字节（疑似二进制/UTF-16），未改动剪贴板"
+    rm -f $raw $conv; return 1
+  fi
+  if ! iconv -f UTF-8 -t UTF-8 < $raw > /dev/null 2>&1; then
+    print -u2 "wclip: 输入不是 UTF-8（可能为 GBK/UTF-16），未改动剪贴板"
+    rm -f $raw $conv; return 1
+  fi
+  if iconv -f UTF-8 -t cp936 < $raw >| $conv 2>/dev/null; then
+    clip.exe < $conv
+  else
+    powershell.exe -NoProfile -Command \
+      '[Console]::InputEncoding=[Text.Encoding]::UTF8; Set-Clipboard -Value ([Console]::In.ReadToEnd() -replace "\r?\n","`r`n")' < $raw || {
+      print -u2 "wclip: 写入剪贴板失败"; rm -f $raw $conv; return 1
+    }
+  fi
+  rm -f $raw $conv
+}
+
 set -o noclobber
 set -o autocd
 
